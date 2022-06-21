@@ -23,7 +23,7 @@ spectral_envelope_amplitude = expanded_counts**0.5
 shifted_frequencies = expanded_frequencies-expanded_frequencies[i]
 
 envelope = np.abs(np.fft.fftshift(np.fft.ifft(spectral_envelope_amplitude)))
-times = 2.*np.pi*np.fft.fftshift(np.fft.fftfreq(len(spectral_envelope_amplitude), df))
+times = np.fft.fftshift(np.fft.fftfreq(len(spectral_envelope_amplitude), df))
 
 peak_index = np.argmax(envelope)
 for j in range(int(len(envelope)/5)):
