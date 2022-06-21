@@ -1,2 +1,2 @@
 # flat-phase-duration
-Code for estimating pulse duration assuming flat phase
+Code for estimating pulse duration from spectrum assuming flat phase
